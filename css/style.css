@@ -1,0 +1,720 @@
+/*The whole page style*/
+body{
+
+    text-align: center;
+    margin:0px;
+    font-family: 'Nunito',Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: whitesmoke;
+    width:100%;
+    overflow-x: hidden;
+    height:100%;
+}
+
+
+/*navigation section*/
+#navigation{
+
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(62,44,0,1) 50%, rgba(10,10,10,1) 100%);
+    font-size: 1.9vw;
+    position:sticky;
+    top:0%;
+    z-index:999;
+    width:100%;
+    height:40px;
+
+}
+
+#navigation table{
+    
+    border-collapse: collapse;
+    width:100%; 
+    height: 100%;
+    
+    
+}
+
+#navigation td{
+    
+    width:16.67%;
+    padding:0px;
+    
+}
+
+#navigation a{
+
+    display:block;
+    color: #bea873;
+    height:100%;
+    text-decoration: none;
+    padding-top: 5px;
+
+}
+
+
+#navigation .leftBorder:hover{
+
+    font-size: 22px;
+    transition:0.5s;
+    border-bottom: solid 3px brown;
+    color: #b8860b;
+
+
+}
+
+#navigation a:active{
+
+    background-color: white;
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+
+}
+
+.leftBorder{
+
+    border-left: solid 1px black;
+
+}
+
+.activePage{
+
+    border-left: solid 1px black;
+    border-bottom: solid 3px brown;
+
+}
+
+/*Title*/
+header{
+
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color:#bea873;
+
+
+}
+
+
+
+/*Home content*/
+/*Welcome*/
+#welcomeContent{
+    height: 400px;
+    background: url('../images/woman-hiero-cropped.jpg') 0 0 no-repeat, linear-gradient(to bottom, rgba(0,0,0,0) 20%,rgba(0,0,0,1) 100%);
+    background-size: 100%;
+    background-blend-mode:saturation;
+    overflow:hidden;
+
+}
+
+
+#womanHiero{
+    background: linear-gradient(to bottom, rgba(url('../images/woman-hiero-cropped.jpg'), 0.0), rgba(url('../images/woman-hiero-cropped.jpg'), 1.0));
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.smallWelcome{
+
+    font-size: 65px;
+
+}
+
+.fadeMessage{
+    
+    margin:0;
+    width:80%;
+    font-size: 130px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    animation: fadeIn linear 3s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:100%;}
+}
+
+/*Invitation*/
+#invitationMessage{
+
+    font-size: larger;
+    padding-bottom: 50px;
+
+}
+
+#coffin{
+    
+    width: 45%;
+
+    right:0px;
+}
+
+/*About us*/
+
+#aboutUs{
+
+    text-align:justify;
+    width:50%;
+    font-size: 25px;
+    padding: 10px 5px 10px 55px;
+    float:left;
+    margin: 0 auto;
+
+}
+
+#aboutTitle{
+
+    font-size:larger;
+
+}
+/*The end of Home content*/
+
+/*Booking content*/
+/*Room List Page*/
+.bookButton{
+    margin-bottom: 50px;
+    border: solid gray 1px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #bea873;
+    
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0;
+    height:32px;
+    
+}
+
+.bookButton a {
+
+    text-decoration: none; 
+    padding:6px;
+    color: white;
+}
+
+.bookButton a:hover{
+    color: #bea873;
+    background-color: white;
+}
+
+
+.eachRoom{
+    border: solid gray 1px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(62,44,0,1) 50%, rgba(10,10,10,1) 100%);
+    border-radius: 20px;
+}
+
+.eachRoom h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-block: 10px;
+    color: #bea873;
+
+}
+
+.roomPrice{
+    height:40px;
+    font-size: 40px;
+    color:rgb(65, 190, 138);
+    text-align: center;
+}
+
+.roomDescription p{
+    font-size:2vw;
+    text-align: justify;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+.roomDescription ul{
+    text-align: left;
+    font-size:1.5vw;
+}
+.eachRoom td{
+   
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.eachRoom img{
+    border-radius: 100px;
+}
+
+/*Booking Confirmation*/
+#enterDetails{
+    font-size: 30px;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.formHeader{
+    font-size:20px;
+}
+#personalForm, #cardForm, #roomForm{
+    
+    text-align: left;
+    margin: auto;
+    margin-top:15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+input.error, select.error{
+    border:solid 2px red;
+}
+
+#errorMessage{
+    color: red;
+    margin-bottom: 10px;
+}
+
+
+#detailList{
+    width: 20%;
+    margin:auto;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+
+#completeBooking h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size:40px; 
+}
+#completeBooking button{
+    margin-top:50px;
+    margin-bottom:110px;
+}
+/*The end of Booking content*/
+
+/*Activity content*/
+/*List for all activities*/
+#activityList{
+
+    display: inline;
+    
+
+}
+#activityListDescription{
+    font-size: larger;
+    width:80%;
+    margin:auto;
+    margin-bottom: 20px;
+}
+.eachActivity{
+
+    margin-left: 20px;
+    width: 31%;
+    height:450px;
+    border: solid 1px white;
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(62,44,0,1) 50%, rgba(10,10,10,1) 100%);
+    float:left;
+    margin-bottom: 40px;
+    animation: fadeUp ease-out 2s;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+@keyframes fadeUp {
+    0% {opacity:0;}
+    100% {opacity:100%;}
+}
+
+
+
+.activityPict{
+
+    padding-bottom: 10px;
+
+} 
+
+.activitiesTitle{
+
+    font-size: 20px;
+    padding-top:5px;
+
+}
+
+.clickDetails a{
+
+    text-decoration: none;
+    color:red;
+
+}
+
+.clickDetails a:hover{
+
+    text-decoration: underline;
+}
+
+#camelPopUp{
+    visibility: hidden;
+}
+.popup{
+    position:fixed;
+    background : rgba(0,0,0,0.9);
+    visibility: hidden;
+    width:100%;
+    top:0;
+    left:0;
+    transition: all 1s ease;
+    opacity:0;
+    text-align:center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    z-index: 999;
+    
+}
+.popup nav{
+    font-size:40px;
+}
+.activityDetail{
+    width:80%;
+    margin:auto;
+}
+.activityDetail h2{
+    font-size:30px;
+}
+.activityDetail h3,ul{
+    font-size:25px;
+}
+.activityDetail ul{
+    width:50%;
+    margin:auto;
+    text-align:left;
+}
+.closeButton{
+    padding-top: 5px;
+
+}
+.closeButton a{
+    color:#b8860b;
+    text-decoration: none;
+}
+
+.closeButton a:hover{
+    text-decoration: underline;
+}
+
+body.showPopUpTreasure{
+    overflow:hidden;
+    
+}
+body.showPopUpTreasure #treasurePopUp{
+    visibility: visible;
+    opacity: 1;
+    overflow-y:scroll;
+}
+
+body.showPopUpCamel{
+    overflow:hidden;
+}
+body.showPopUpCamel #camelPopUp{
+    visibility: visible;
+    opacity: 1;
+    overflow-y:scroll;
+
+}
+
+body.showPopUpSphinx{
+    overflow:hidden;
+    
+}
+body.showPopUpSphinx #sphinxPopUp{
+    visibility: visible;
+    opacity: 1;
+    overflow-y:scroll;
+	
+
+}
+/*The end of Activity content*/
+
+/*Restaurant content*/
+/* Slideshow */
+#slideshow{
+    margin-top: 0;
+    max-width:80%;
+    margin:auto;
+}
+#slideshow .tns-outer {
+	margin: auto;
+}
+
+#slideshow img {
+	width: 100.2%;
+    border-radius: 10px;
+
+}
+
+#slideshow .tns-controls {
+	display: none;
+	text-align: center;
+}
+
+
+
+body.js #slideshow .tns-controls {
+	display: block;
+}
+
+picture{
+    border-radius: 20px; 
+    width:100%;
+
+}
+
+#restaurantInfo{
+    font-size:30px;
+    padding-left:100px;
+    padding-right: 100px;
+}
+
+#restaurantInfo blockquote{
+    font-size: 25px;
+    padding-bottom: 20px;
+    
+}
+
+#restaurantInfo ul{
+    width:60%;
+    text-align: left;
+    margin:auto;
+}
+#controls{
+    margin-top: 20px;
+}
+.previous{
+    border-radius: 50px;
+    background-color:rgb(107, 77, 1);
+    color:white;
+    height:30px;
+}
+.next{
+    border-radius: 50px;
+    background-color:rgb(107, 77, 1);
+    color:white;
+    height:30px; 
+}
+
+/*The end of Restaurant content*/
+
+/*Information content*/
+#informationList table{
+    width:25%;
+    margin:auto;
+    padding-top: 5px;
+}
+#informationList td{
+    
+    padding-top: 5px;
+    padding-bottom:5px;
+
+}
+
+#contactDetails{
+    padding-bottom: 15px;
+}
+
+#contactDetails{
+
+    text-align: left;
+
+}
+
+hr{
+    margin-bottom:15px;
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+#locationDetails{
+    
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+
+#mapLink{
+
+    padding-bottom: 50px;
+
+}
+.tableTitle{
+
+    font-size: 20px;
+
+}
+/*The end of Information content*/
+
+/*Faqs content*/
+.faqsList{
+    width:80%;
+    margin:auto;
+    border-collapse: collapse;
+    margin-bottom:25px;
+    margin-top:25px;
+}
+
+.qna{
+    font-size: 40px;
+    padding-left: 10px;
+    
+}
+.questionRow{
+    background-color: rgba(128, 128, 128, 0.39);
+    border-left: solid 5px #b8860b;
+    color:#b8860b;
+
+}
+.question{
+    
+    height: 50px;
+    padding-left:10px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    font-size:30px;
+    margin: auto;
+    
+}
+
+.answerRow{
+    background-color: rgb(41, 41, 41);
+    border-left: solid 5px #bea873;
+    color:#bea873;
+
+}
+.answer{
+   
+    height: 50px;
+    width: 100%;
+    margin:auto;
+    font-size:30px;
+    text-align: left;    
+    
+    padding-left:10px;
+    
+
+}
+
+
+/*The end of Faqs content*/
+
+/*Footer*/
+footer{
+
+    display: inline-block;
+    background-color:#202020;
+    height:75px;
+    width: 100%;
+    clear: both;
+}
+/*Reference List*/
+#referenceList{
+    text-align: left;
+    width: 90%;
+    margin:auto;
+}
+
+/*Responsive*/
+/*Larger screen(Larger Monitor)*/
+@media only screen and (min-width: 1281px) { 
+    body{
+        font-size:20px;
+    }
+    #welcomeContent{
+        height:500px;
+    }
+    #navigation{
+        height: 55px;
+    }
+    #navigation table{
+    
+        border-collapse: collapse;
+        width:100%; 
+        height: 100%;
+        
+    }
+    #navigation .leftBorder:hover{
+        font-size: 35px;
+    }
+
+}
+/*Smaller Laptop Screen (e.g. Windowed Mode/Ipad)*/
+@media only screen and (max-width: 1216px) { 
+    .fadeMessage { 
+
+        top:10%;
+        left: 50%;
+        font-size: 10vw;
+        transform: translate(-50%, -10%);
+
+    }
+    #coffin { 
+
+        display: none;
+
+    }
+
+    #aboutUs{
+        
+        display:block;
+        text-align: center;
+        width:90%;
+        margin:auto;
+
+    }
+}
+
+/*Smartphone*/
+@media only screen and (max-width: 960px) { 
+    #navigation{
+        height:30px;
+    }
+    #navigation a:hover{
+        font-size:2.3vw;
+        transition: 0.5s;
+    }
+
+    .fadeMessage{
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+    }
+    #invitationMessage{
+        margin-left:5px;
+        margin-right:5px;
+    }
+
+    #aboutUs{
+        width:80%;
+    }
+
+    #roomDescription p{
+        font-size: 1.5vw;
+    }
+    
+    .eachActivity{
+        display: block;
+        width:95%;
+
+    }
+        
+    
+    .popup nav{
+        font-size: 40px;
+    }
+    .popup article{
+        font-size: 50px;
+    }
+}

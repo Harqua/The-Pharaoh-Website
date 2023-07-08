@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset = "utf-8">
+        <title>The Pharaoh Resort</title>
+        <link rel="stylesheet" href = "css/style.css">
+        <link rel="stylesheet" href="js/tiny-slider/tiny-slider.css">
+		<link rel="stylesheet" href="js/aos/aos.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+        <meta name="author" content="Garryco Thandi">
+		<meta name="robots" content="index, follow">
+		<meta name="description" content="Resort for History Enthusiasts.">
+    </head>
+
+    <body>
+        <nav id="navigation">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="leftBorder"><a href="index.html">Home</a></td>
+                        <td class="activePage"><a href="booking.html">Booking</a></td>
+                        <td class="leftBorder"><a href="activities.html">Activities</a></td>
+                        <td class="leftBorder"><a href="restaurant.html">Restaurant</a></td>
+                        <td class="leftBorder"><a href="information.html">Information</a></td>
+                        <td class="leftBorder"><a href="faqs.html">FAQs</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        
+        <main>
+            <form id = "incompleteForm">
+                <header>
+                    Booking Confirmation
+                </header>
+
+                <p id = "enterDetails">Please enter following details</p>
+                <p class = "formHeader">Personal Information</p>
+                <table id = "personalForm">
+                    <tbody>
+                        
+                        <tr>
+                            <td><label for="fullName">Full Name </label></td>
+                            <td>: <input type="text" id="fullName" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="emailAddress">Email Address </label></td>
+                            <td>: <input type="email" id="emailAddress" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phoneNumber">Phone Number </label></td>
+                            <td>: <input type="text" id="phoneNumber" value="" placeholder="041*******"></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <p class = "formHeader">Room Information</p>
+                <table id = "roomForm">
+                    <tbody>
+                        <tr>
+                            <td><label for="dateBooking">Date </label></td>
+                            <td>: <input type="date" id="dateBooking"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="roomType">Room Type </label></td>
+                            <td>: 
+                                <select id ="roomType">
+                                    <option value= "">(Select a room type)</option>
+                                    <option value= "Pharaoh">Pharaoh's Room</option>
+                                    <option value= "Medjay">Medjay's Room</option>
+                                    <option value= "Modern">Modern Room</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="numOfNights">No. of Night(s) </label></td>
+                            <td>: <input type="number" id="numOfNights" min = "1" max = "3"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class = "formHeader">Card Information</p>
+                <table id = "cardForm">
+                    <tbody>
+                        <tr>
+                            <td><label for="cardName">Card Name </label></td>
+                            <td>: <input type="text" id="cardName" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="cardNumber">Card Number </label></td>
+                            <td>: <input type="text" id="cardNumber"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="expiry">Expiry </label></td>
+                            <td>: <input type="text" id="expiry" placeholder="mm/yy"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="cvv">CVV </label></td>
+                            <td>: <input type="number" id="cvv" min = "100" max= "999"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id = "errorMessage"></div>
+                <button id = "confirmBooking" class = "bookButton">
+                    <a>Confirm</a>
+                </button>
+            </form>
+            
+            <section id = "bookingDetail">
+                <header>
+                    Booking Details
+                </header>
+                <div>
+
+                    <h2>
+                        Your details are:
+                    </h2>
+                    <table id = "detailList">
+                        <tr>
+                            <td>Full Name</td>
+                            <td>:</td>
+                            <td id = "guestName"></td>
+                        </tr>
+                        <tr>
+                            <td>Email Address</td>
+                            <td>:</td>
+                            <td id = "guestEmail"></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>:</td>
+                            <td id = "guestPhone"></td>
+                        </tr>
+                        <tr>
+                            <td>Room Type</td>
+                            <td>:</td>
+                            <td id = "guestRoom"></td>
+                        </tr>
+                        <tr>
+                            <td>Booking Date</td>
+                            <td>:</td>
+                            <td id = "guestBooking"></td>
+                        </tr>
+                        <tr>
+                            <td>No. of Night(s)</td>
+                            <td>:</td>
+                            <td id = "guestNight"></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>:</td>
+                            <td id = "guestPrice"></td>
+                        </tr>
+                    </table>
+                    <button id = "confirmDetail" class = "bookButton"><a href = "#backToHome">Proceed</a></button>
+                </div>
+            </section>
+            
+            <section id = "completeBooking">
+                <header>
+                    Success!!
+                </header>
+                <h2>Your booking has been confirmed</h2>
+                <button id = "backToHome" class = "bookButton"><a href = "index.html">Back to Home</a></button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; The Pharaoh Resort<br><a href = "reference.html">Reference List</a></p>
+        </footer>
+
+        <script src="js/script.js" ></script>
+        <script src="js/tiny-slider/min/tiny-slider.js" ></script>
+		<script src="js/aos/aos.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+    </body>
+</html>
